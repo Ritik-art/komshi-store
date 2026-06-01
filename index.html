@@ -561,6 +561,179 @@ color:#666;
 line-height:1.7;
 }
 
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+z-index:9999;
+padding:20px;
+overflow:auto;
+}
+
+.modal-content{
+
+background:white;
+
+max-width:900px;
+
+margin:50px auto;
+
+border-radius:15px;
+
+position:relative;
+
+padding:30px;
+
+}
+
+.modal-body{
+
+display:flex;
+
+align-items:center;
+
+gap:40px;
+
+}
+
+.modal-image{
+
+flex:1;
+
+}
+
+.modal-image img{
+
+width:100%;
+
+max-height:500px;
+
+object-fit:contain;
+
+border-radius:12px;
+
+}
+
+.modal-details{
+
+flex:1;
+
+text-align:left;
+
+}
+
+.modal-details h2{
+
+font-size:32px;
+
+color:#111827;
+
+margin-bottom:15px;
+
+}
+
+#modalPrice{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+}
+
+#modalDesc{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#666;
+
+margin-bottom:25px;
+
+}
+
+.enquiry-btn{
+
+display:inline-block;
+
+padding:12px 30px;
+
+background:#d4af37;
+
+color:#111827;
+
+font-weight:bold;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+.enquiry-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.close{
+
+position:absolute;
+
+top:10px;
+
+right:20px;
+
+font-size:35px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+color:#111827;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.modal-body{
+
+flex-direction:column;
+
+}
+
+.modal-details{
+
+text-align:center;
+
+}
+
+.modal-details h2{
+
+font-size:24px;
+
+}
+
+#modalPrice{
+
+font-size:22px;
+
+}
+
+}
+
 </style>
 </head>
 
@@ -591,18 +764,54 @@ line-height:1.7;
 <h2>Our Products</h2>
 
 <div class="gallery">
-<img src="images/Gemini_Generated_Image_3i3h303i3h303i3h.png" alt="Product 1">
-<img src="images/Gemini_Generated_Image_4hr3ha4hr3ha4hr3 (1).png" alt="Product 2">
-<img src="images/Gemini_Generated_Image_7495i67495i67495.png" alt="Product 3">
-<img src="images/Gemini_Generated_Image_axjuxbaxjuxbaxju.png" alt="Product 4">
-<img src="images/Gemini_Generated_Image_bgzobsbgzobsbgzo.png" alt="Product 5">
-<img src="images/Gemini_Generated_Image_d7ljdhd7ljdhd7lj.png" alt="Product 6">
-<img src="images/Gemini_Generated_Image_fqfybkfqfybkfqfy.png" alt="Product 7">
-<img src="images/Gemini_Generated_Image_hi9q5mhi9q5mhi9q.png" alt="Product 8">
-<img src="images/Gemini_Generated_Image_lzbguflzbguflzbg.png" alt="Product 9">
-<img src="images/Gemini_Generated_Image_puew0vpuew0vpuew.png" alt="Product 10">
-<img src="images/Gemini_Generated_Image_stawerstawerstaw (1).png" alt="Product 11">
-<img src="images/Gemini_Generated_Image_zaufwrzaufwrzauf.png" alt="Product 12">
+<img src="images/product_1.png" alt="Product 1" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_2.png" alt="Product 2" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_3.png" alt="Product 3" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_4.png" alt="Product 4" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_5.png" alt="Product 5" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_6.png" alt="Product 6" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_7.png" alt="Product 7" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_8.png" alt="Product 8" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_9.png" alt="Product 9" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_10.png" alt="Product 10" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_11.png" alt="Product 11" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
+<img src="images/product_12.png" alt="Product 12" data-name="Gym Gloves"
+     data-price="₹499"
+     data-desc="Premium gym gloves with extra grip."
+     onclick="openModal(this)">
 </div>
 </section>
 
@@ -664,12 +873,86 @@ We believe that fitness is more than a lifestyle—it's a commitment to personal
 © 2026 Komshi | All Rights Reserved
 </footer>
 
+<div id="productModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<div class="modal-body">
+
+<div class="modal-image">
+
+<img id="modalImg" src="">
+
+</div>
+
+<div class="modal-details">
+
+<h2 id="modalTitle"></h2>
+
+<h3 id="modalPrice"></h3>
+
+<p id="modalDesc"></p>
+
+<a href="#contact" class="enquiry-btn">
+Enquire Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 <script>
 document.getElementById("contactForm").addEventListener("submit",function(e){
 e.preventDefault();
 alert("Message sent successfully");
 this.reset();
 });
+</script>
+
+<script>
+
+function openModal(el){
+
+document.getElementById("productModal").style.display="block";
+
+document.getElementById("modalImg").src = el.src;
+
+document.getElementById("modalTitle").innerText =
+el.dataset.name;
+
+document.getElementById("modalPrice").innerText =
+el.dataset.price;
+
+document.getElementById("modalDesc").innerText =
+el.dataset.desc;
+
+}
+
+function closeModal(){
+
+document.getElementById("productModal").style.display="none";
+
+}
+
+window.onclick = function(event){
+
+let modal =
+document.getElementById("productModal");
+
+if(event.target == modal){
+
+modal.style.display="none";
+
+}
+
+}
+
 </script>
 
 </body>
