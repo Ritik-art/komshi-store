@@ -12,6 +12,19 @@
 
 <style>
 
+.whatsapp-btn{
+     position:fixed;
+     bottom:20px;
+     right:20px;
+     background:#25D366;
+     color:#fff;
+     padding:15px 20px;
+     border-radius:50px;
+     text-decoration:none;
+     font-weight:bold;
+     z-index:9999;
+}
+
 *{
 margin:0;
 padding:0;
@@ -779,6 +792,11 @@ font-size:22px;
 </div>
 
 <nav>
+<a href="https://wa.me/7827143899"
+   class="whatsapp-btn"
+   target="_blank">
+   WhatsApp Us
+</a>
 <a href="#">Home</a>
 <a href="#products">Products</a>
 <a href="#about">About</a>
@@ -1049,7 +1067,25 @@ We believe that fitness is more than a lifestyle—it's a commitment to personal
 </section>
 
 <footer>
-© 2026 Komshi | All Rights Reserved
+
+    <div class="footer-content">
+
+        <!-- <h3>Komshi Store</h3> -->
+
+        <p>Premium Gym Belts & Fitness Accessories Manufacturer</p>
+
+        <div class="footer-contact">
+            <p>📞 +91 7827143899</p>
+            <p>✉️ ritikdhu2001@gmail.com</p>
+            <p>📍 Jalandhar, India</p>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 Komshi Store. All Rights Reserved.
+        </p>
+
+    </div>
+
 </footer>
 
 <div id="productModal" class="modal">
@@ -1108,10 +1144,6 @@ We believe that fitness is more than a lifestyle—it's a commitment to personal
 
 <p id="modalDesc"></p>
 
-<!-- <a href="#contact" class="enquiry-btn">
-    Enquire Now
-</a> -->
-
 </div>
 
 </div>
@@ -1121,76 +1153,76 @@ We believe that fitness is more than a lifestyle—it's a commitment to personal
 </div>
 
 <script>
-document.getElementById("contactForm").addEventListener("submit",function(e){
-e.preventDefault();
-alert("Message sent successfully");
-this.reset();
-});
+     document.getElementById("contactForm").addEventListener("submit",function(e){
+          e.preventDefault();
+          alert("Message sent successfully");
+          this.reset();
+     });
 </script>
 
 <script>
 
-function openModal(el){
+     function openModal(el){
 
-document.getElementById("productModal").style.display="block";
+     document.getElementById("productModal").style.display="block";
 
-document.getElementById("modalImg").src = el.src;
+     document.getElementById("modalImg").src = el.src;
 
-document.getElementById("modalTitle").innerText =
-el.dataset.name;
+     document.getElementById("modalTitle").innerText =
+     el.dataset.name;
 
-document.getElementById("modalPrice").innerText =
-el.dataset.price;
+     document.getElementById("modalPrice").innerText =
+     el.dataset.price;
 
-document.getElementById("modalType").innerText =
-el.dataset.type || "-";
+     document.getElementById("modalType").innerText =
+     el.dataset.type || "-";
 
-document.getElementById("modalMaterial").innerText =
-el.dataset.material || "-";
+     document.getElementById("modalMaterial").innerText =
+     el.dataset.material || "-";
 
-document.getElementById("modalColor").innerText =
-el.dataset.color || "-";
+     document.getElementById("modalColor").innerText =
+     el.dataset.color || "-";
 
-document.getElementById("modalSize").innerText =
-el.dataset.size || "-";
+     document.getElementById("modalSize").innerText =
+     el.dataset.size || "-";
 
-document.getElementById("modalPattern").innerText =
-el.dataset.pattern || "-";
+     document.getElementById("modalPattern").innerText =
+     el.dataset.pattern || "-";
 
-document.getElementById("modalAvailability").innerText =
-el.dataset.availability || "-";
+     document.getElementById("modalAvailability").innerText =
+     el.dataset.availability || "-";
 
-document.getElementById("modalDesc").innerText =
-el.dataset.desc;
-}
+     document.getElementById("modalDesc").innerText =
+     el.dataset.desc;
+     }
 
-function closeModal(){
+     function closeModal(){
 
-document.getElementById("productModal").style.display="none";
+     document.getElementById("productModal").style.display="none";
 
-}
+     }
 
-window.onclick = function(event){
+     window.onclick = function(event){
 
-let modal =
-document.getElementById("productModal");
+     let modal =
+     document.getElementById("productModal");
 
-if(event.target == modal){
+     if(event.target == modal){
 
-modal.style.display="none";
+     modal.style.display="none";
 
-}
+     }
 
-}
+     }
 
 </script>
 
 <script>
-window.addEventListener('load', () => {
-    document.querySelectorAll('.gallery img').forEach(img => {
-        img.fetchPriority = 'low';
-    });
-});
+     window.addEventListener('load', () => {
+          document.querySelectorAll('.gallery img').forEach(img => {
+               img.fetchPriority = 'low';
+          });
+     });
 </script>
 
 </body>
